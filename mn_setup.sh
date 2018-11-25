@@ -7,7 +7,7 @@ COIN_DAEMON='SpectreSecurityCoind'
 COIN_CLI='SpectreSecurityCoind'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin.git'
-COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/archive/v1.0.1.3-1.tar.gz'
+COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.1.3-1/SpectreSecurityCoind.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='SpectreSecurityCoin'
@@ -30,7 +30,7 @@ purgeOldInstallation() {
     #kill wallet daemon
     sudo killall SpectreSecurityCoind > /dev/null 2>&1
     #remove old ufw port allow
-    sudo ufw delete allow 36963/tcp > /dev/null 2>&1
+    sudo ufw delete allow 13338/tcp > /dev/null 2>&1
     #remove old files
     if [ -d "~/.SpectreSecurityCoin" ]; then
         sudo rm -rf ~/.SpectreSecurityCoin > /dev/null 2>&1
