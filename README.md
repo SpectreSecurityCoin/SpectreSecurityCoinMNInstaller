@@ -1,0 +1,2 @@
+# SpectreSecurityCoinMNInstaller
+SpectreSecurityCoin Masternode Installer
