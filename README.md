@@ -86,6 +86,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 4***
 * Type "root" as the login/username.
+
 ![Root](https://i.imgur.com/brzKtOn.png)
 ***
 
