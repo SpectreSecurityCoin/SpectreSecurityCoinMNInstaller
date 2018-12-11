@@ -91,7 +91,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 5*** 
 * Paste the password into the Bitvise terminal by right clicking (it will not show the password so just press enter)
-![RootPassEnter](https://i.imgur.com/zVhOAKu.png)
+![RootPassEnter](https://i.imgur.com/ENwnIWh.png)
 ***
 
 ***Step 6*** 
@@ -100,7 +100,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 7***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
-![RootPassEnter](https://i.imgur.com/ENwnIWh.png)
+![RootPassEnter](https://i.imgur.com/K6xlnav.png)
 
 `wget -q https://raw.githubusercontent.com/SpectreSecurityCoin/SpectreSecurityCoinMNInstaller/master/mn_setup.sh`
 ***
