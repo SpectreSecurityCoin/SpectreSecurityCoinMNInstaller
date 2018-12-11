@@ -29,7 +29,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 3*** 
 * Choose a server location (preferably somewhere close to you)
-![Location](https://i.imgur.com/ozi7Bkr.png)
+![Location](https://i.imgur.com/kQ5vKEV.png)
 ***
 
 ***Step 4***
@@ -71,22 +71,22 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 1***
 * Copy your VPS IP (you can find this by going to the server tab within Vultr and clicking on your server. 
-![Vultr](https://i.imgur.com/z41MiwY.png)
+![Vultr](https://i.imgur.com/q3KvEr8.png)
 ***
 
 ***Step 2***
 * Open the bitvise application and fill in the "Hostname" box with the IP of your VPS.
-![Bitvise-Installer](https://i.imgur.com/vkN1alC.png)
+![Bitvise-Installer](https://i.imgur.com/PI3w6bB.png)
 ***
 
 ***Step 3***
 * Copy the root password from the VULTR server page.
-![RootPass](https://i.imgur.com/JnXQXav.png)
+![RootPass](https://i.imgur.com/8LfD93h.png)
 ***
 
 ***Step 4***
 * Type "root" as the login/username.
-![Root](https://i.imgur.com/11GMkvA.png)
+![Root](https://i.imgur.com/brzKtOn.png)
 ***
 
 ***Step 5*** 
@@ -100,7 +100,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 7***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
-![RootPassEnter](https://i.imgur.com/K6xlnav.png)
+![RootPassEnter](https://i.imgur.com/ENwnIWh.png)
 
 `wget -q https://raw.githubusercontent.com/SpectreSecurityCoin/SpectreSecurityCoinMNInstaller/master/mn_setup.sh`
 ***
