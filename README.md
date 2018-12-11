@@ -81,6 +81,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 3***
 * Copy the root password from the VULTR server page.
+
 ![RootPass](https://i.imgur.com/8LfD93h.png)
 ***
 
