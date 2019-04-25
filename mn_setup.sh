@@ -7,7 +7,7 @@ COIN_DAEMON='SpectreSecurityCoind'
 COIN_CLI='SpectreSecurityCoind'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin.git'
-COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.1.5-1/SpectreSecurityCoind.tar.gz'
+COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.1.6-1/SpectreSecurityCoind.tar.gz'
 COIN_BOOTSTRAP='https://bootstrap.spectresecurity.io/boot_strap.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
@@ -58,14 +58,14 @@ function download_node() {
 function download_bootstrap() {
   echo -e "${GREEN}Downloading and Installing $COIN_NAME BootStrap${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
+  rm -rf boot* >/dev/null 2>&1
   wget -q $COIN_BOOTSTRAP
-  cd $CONFIGFOLDER
+  cd $CONFIGFOLDER >/dev/null 2>&1
   rm -rf blk* database* txindex* peers.dat
   tar xvzf $COIN_BOOTSTRAP $CONFIGFOLDER >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
-  systemctl start $COIN_NAME.service
 }
 
 function configure_systemd() {
