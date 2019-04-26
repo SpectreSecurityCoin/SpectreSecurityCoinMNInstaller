@@ -29,6 +29,7 @@ MAG='\e[1;35m'
 purgeOldInstallation() {
     echo -e "${GREEN}Searching and removing old $COIN_NAME Daemon{NC}"
     #kill wallet daemon
+    sudo SpectreSecurityCoind stop > /dev/null 2>&1
     sudo killall SpectreSecurityCoind > /dev/null 2>&1
     cd $CONFIGFOLDER >/dev/null 2>&1
     rm -rf *.pid *.lock blk*.dat tx* database >/dev/null 2>&1
