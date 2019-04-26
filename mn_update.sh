@@ -51,6 +51,7 @@ function download_node() {
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
+
 function download_bootstrap() {
   echo -e "${GREEN}Downloading and Installing $COIN_NAME BootStrap${NC}"
   mkdir -p /root/tmp
@@ -68,7 +69,6 @@ function download_bootstrap() {
  # clear
 
 }
-
 
 function enable_firewall() {
   echo -e "Installing and setting up firewall to allow ingress on port ${GREEN}$COIN_PORT${NC}"
@@ -101,7 +101,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 if [ -n "$(pidof $COIN_DAEMON)" ] || [ -e "$COIN_DAEMOM" ] ; then
-  echo -e "${RED}$COIN_NAME is already installed.${NC}"
+  echo -e "${RED}$COIN_NAME is already installed Please re-run script to upgrade.${NC}"
   exit 1
 fi
 }
@@ -158,7 +158,7 @@ function important_information() {
 function setup_node() {
   enable_firewall
   download_bootstrap
-  systemctl start $COIN_NAME.service
+  SpectreSecurityCoind -server -daemon -listen
   important_information
 }
 
