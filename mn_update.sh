@@ -61,13 +61,11 @@ function download_bootstrap() {
   cd $CONFIGFOLDER >/dev/null 2>&1
   rm -rf blk* database* txindex* peers.dat
   cd /root/tmp >/dev/null 2>&1
-
   tar -zxf $COIN_ZIP /root/tmp >/dev/null 2>&1
   cp -Rv cache/* $CONFIGFOLDER >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
- # clear
-
+  clear
 }
 
 function enable_firewall() {
