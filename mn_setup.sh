@@ -10,6 +10,7 @@ COIN_REPO='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin.git'
 COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.1.6-1/SpectreSecurityCoind.tar.gz'
 COIN_BOOTSTRAP='https://bootstrap.spectresecurity.io/boot_strap.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
+COIN_CHAIN=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='SpectreSecurityCoin'
 COIN_PORT=13338
@@ -64,7 +65,7 @@ function download_bootstrap() {
   cd $CONFIGFOLDER >/dev/null 2>&1
   rm -rf blk* database* txindex* peers.dat
   cd /root/tmp >/dev/null 2>&1
-  tar -zxf $COIN_ZIP /root/tmp >/dev/null 2>&1
+  tar -zxf $COIN_CHAIN /root/tmp >/dev/null 2>&1
   cp -Rv cache/* $CONFIGFOLDER >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
