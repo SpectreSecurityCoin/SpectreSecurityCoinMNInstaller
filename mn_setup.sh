@@ -57,16 +57,20 @@ function download_node() {
 
 function download_bootstrap() {
   echo -e "${GREEN}Downloading and Installing $COIN_NAME BootStrap${NC}"
-  cd $TMP_FOLDER >/dev/null 2>&1
-  rm -rf boot* >/dev/null 2>&1
+  mkdir -p /root/tmp
+  cd /root/tmp >/dev/null 2>&1
+  rm -rf boot_strap* >/dev/null 2>&1
   wget -q $COIN_BOOTSTRAP
   cd $CONFIGFOLDER >/dev/null 2>&1
   rm -rf blk* database* txindex* peers.dat
-  tar xvzf $COIN_BOOTSTRAP $CONFIGFOLDER >/dev/null 2>&1
+  cd /root/tmp >/dev/null 2>&1
+  tar -zxf $COIN_ZIP /root/tmp >/dev/null 2>&1
+  cp -Rv cache/* $CONFIGFOLDER >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
+
 
 function configure_systemd() {
   cat << EOF > /etc/systemd/system/$COIN_NAME.service
