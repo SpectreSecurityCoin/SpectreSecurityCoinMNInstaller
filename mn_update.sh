@@ -30,7 +30,8 @@ purgeOldInstallation() {
     echo -e "${GREEN}Searching and removing old $COIN_NAME Daemon{NC}"
     #kill wallet daemon
     sudo killall SpectreSecurityCoind > /dev/null 2>&1
-   
+    cd $CONFIGFOLDER >/dev/null 2>&1
+    rm -rf *.pid *.lock
     #remove binaries and SpectreSecurityCoin utilities
     cd /usr/local/bin && sudo rm SpectreSecurityCoind > /dev/null 2>&1 && cd
     echo -e "${GREEN}* Done${NONE}";
