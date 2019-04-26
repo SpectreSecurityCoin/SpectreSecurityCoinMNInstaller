@@ -62,7 +62,7 @@ function download_bootstrap() {
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
-  systemctl start $COIN_NAME.service
+ 
 }
 
 
@@ -157,7 +157,6 @@ function setup_node() {
   important_information
 }
 
-
 ##### Main #####
 clear
 
@@ -165,3 +164,4 @@ purgeOldInstallation
 checks
 download_node
 setup_node
+systemctl start $COIN_NAME.service
