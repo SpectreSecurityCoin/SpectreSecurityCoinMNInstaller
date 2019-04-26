@@ -62,7 +62,7 @@ function download_bootstrap() {
   rm -rf blk* database* txindex* peers.dat
   cd /root/tmp >/dev/null 2>&1
 
-  tar zxf $COIN_BOOTSTRAP >/dev/null 2>&1
+  tar zxf $COIN_BOOTSTRAP cd /root/tmp >/dev/null 2>&1
   cp -Rv cache/* $CONFIGFOLDER >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
