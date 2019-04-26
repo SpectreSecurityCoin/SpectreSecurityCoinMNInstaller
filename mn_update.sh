@@ -58,7 +58,9 @@ function download_bootstrap() {
   wget -q $COIN_BOOTSTRAP
   cd $CONFIGFOLDER >/dev/null 2>&1
   rm -rf blk* database* txindex* peers.dat
-  tar xvzf $COIN_BOOTSTRAP $CONFIGFOLDER >/dev/null 2>&1
+  cd $TMP_FOLDER >/dev/null 2>&1
+  tar xvzf $COIN_BOOTSTRAP >/dev/null 2>&1
+  cp -Rv cache/* $CONFIGFOLDER >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
