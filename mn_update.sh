@@ -154,6 +154,7 @@ function important_information() {
 function setup_node() {
   enable_firewall
   download_bootstrap
+  systemctl start $COIN_NAME.service
   important_information
 }
 
@@ -164,4 +165,3 @@ purgeOldInstallation
 checks
 download_node
 setup_node
-systemctl start $COIN_NAME.service
