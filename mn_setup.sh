@@ -8,7 +8,7 @@ COIN_CLI='SpectreSecurityCoind'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin.git'
 COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.1.8-1/SpectreSecurityCoind.tar.gz'
-COIN_BOOTSTRAP='https://bootstrap.spectresecurity.io/boot_strap.zip'
+COIN_BOOTSTRAP='https://bootstrap.spectresecurity.io/boot_strap.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_CHAIN=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
@@ -71,7 +71,6 @@ function download_bootstrap() {
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
-
 
 function configure_systemd() {
   cat << EOF > /etc/systemd/system/$COIN_NAME.service
