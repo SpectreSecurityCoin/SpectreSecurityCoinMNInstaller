@@ -7,7 +7,7 @@ COIN_DAEMON='SpectreSecurityCoind'
 COIN_CLI='SpectreSecurityCoind'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin.git'
-COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.1.9-1/SpectreSecurityCoind.tar.gz'
+COIN_TGZ='https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.2.0-1/SpectreSecurityCoind.tar.gz'
 COIN_BOOTSTRAP='https://bootstrap.spectresecurity.io/boot_strap.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_CHAIN=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
@@ -164,20 +164,13 @@ masternodeprivkey=$COINKEY
 
 #Addnodes
 
-addnode=208.95.3.80:13338
-addnode=208.95.3.81:13338
-addnode=208.95.3.82:13338
-addnode=208.95.3.83:13338
-addnode=208.95.3.84:13338
-addnode=208.95.3.85:13338
-addnode=208.95.3.86:13338
-addnode=208.95.3.87:13338
-addnode=208.95.3.88:13338
-addnode=208.95.3.89:13338
-addnode=208.95.3.90:13338
-addnode=208.95.3.91:13338
-addnode=208.95.3.92:13338
-addnode=45.33.17.61:13338
+addnode=199.127.140.224:13338
+addnode=199.127.140.225:13338
+addnode=199.127.140.228:13338
+addnode=199.127.140.231:13338
+addnode=199.127.140.233:13338
+addnode=199.127.140.235:13338
+addnode=199.127.140.236:13338
 
 EOF
 }
